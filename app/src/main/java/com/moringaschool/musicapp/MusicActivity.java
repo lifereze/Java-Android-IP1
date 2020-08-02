@@ -11,9 +11,13 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MusicActivity extends AppCompatActivity {
-    private ListView mListView;
-    private TextView mLocationTextView;
+
+    @BindView(R.id.locationTextView) TextView mLocationTextView;
+    @BindView(R.id.listView) ListView mListView;
 
     private String[] music = new String[] {"Drip Too Hard", "Everyday We Lit",
             "Go Flex", "Goosebumps", "The Grinch", "Gucci On My Way",
@@ -27,6 +31,7 @@ public class MusicActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
+        ButterKnife.bind(this);
 
         mLocationTextView = (TextView) findViewById(R.id.locationTextView);
         mListView = (ListView) findViewById(R.id.listView);
