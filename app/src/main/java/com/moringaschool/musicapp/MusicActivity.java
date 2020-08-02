@@ -9,6 +9,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MusicActivity extends AppCompatActivity {
 
+    private String[] music = new String[] {"Drip Too Hard", "Everyday We Lit",
+            "Go Flex", "Goosebumps", "The Grinch", "Gucci On My Way",
+            "Money In the Grave", "Bounce Back", "Letter To My Daughter", "My Dawg",
+            "Bouff Daddy", "Close Friends", "Congratulations",
+            "Blow my Mind", "Dirty Iyanna"};
+
     private TextView mLocationTextView;
 
     @Override
@@ -19,7 +25,7 @@ public class MusicActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
-        mLocationTextView.setText("Music In your Country" + location);
+        mLocationTextView.setText("Music In your Location" + location);
     }
 
 }

@@ -22,6 +22,7 @@
         android:layout_marginTop="35dp"
         android:shadowColor="#19DD21"
         android:text="Music Masters"
+        android:textSize="50sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/colorDivider" />
 

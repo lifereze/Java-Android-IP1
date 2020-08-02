@@ -39,6 +39,6 @@ public class MainActivityInstrumentationTest {
         }
         onView(withId(R.id.explorebutton)).perform(click());
         onView(withId(R.id.locationTextView)).check(matches
-                (withText("Here are all the restaurants near: " + location)));
+                (withText("Music In your Location: " + location)));
     }
 }
