@@ -25,6 +25,7 @@ public class MusicActivity extends AppCompatActivity {
             "Money In the Grave", "Bounce Back", "Letter To My Daughter", "My Dawg",
             "Bouff Daddy", "Close Friends", "Congratulations",
             "Blow my Mind", "Dirty Iyanna"};
+    private String[] artist = new String[] {"Lil Baby", "YFN Lucci", "Migos", "Travis Scoot", "Polo G", "Will 23", "Drake", "Big Sean", "Rondo", "Lil Baby", "Domani Mungu", "Lil Baby", "Post Malone", "Davido", "Nasty C"};
 
 
 
