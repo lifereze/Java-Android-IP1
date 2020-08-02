@@ -28,7 +28,7 @@ public class MusicActivityInstrumentationTest {
     @Test
     public void listItemClickDisplaysToastWithCorrectRestaurant() {
         View activityDecorView = activityTestRule.getActivity().getWindow().getDecorView();
-        String musicName = "Mi Mero Mole";
+        String musicName = "Drip Too Hard";
         onData(anything())
                 .inAdapterView(withId(R.id.listView))
                 .atPosition(0)
