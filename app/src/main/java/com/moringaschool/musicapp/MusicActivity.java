@@ -2,9 +2,12 @@ package com.moringaschool.musicapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,6 +33,14 @@ public class MusicActivity extends AppCompatActivity {
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, music);
         mListView.setAdapter(adapter);
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String music = ((TextView)view).getText().toString();
+                Toast.makeText(MusicActivity.this, music, Toast.LENGTH_LONG).show();
+            }
+        });
 
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
