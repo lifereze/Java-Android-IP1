@@ -2,7 +2,7 @@
 
 [Link to deployed app.](https://github.com/lifereze/Java-Android-IP1)
 
-### This is an application that a user can be able to carry out music search.Through inputting of the artist name and also save their favorite artist tracks and songs .
+### This is an application that a user can carry out music search.Through inputting an artist name and also save their favorite artist tracks and songs .
 
 ### The following are the specifications of this application:
 1.A user is able to search a music type from the search button through a text editor button.
