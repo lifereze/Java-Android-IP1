@@ -2,6 +2,7 @@ package com.moringaschool.musicapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -26,6 +27,9 @@ public class MusicActivity extends AppCompatActivity {
 
         mLocationTextView = (TextView) findViewById(R.id.locationTextView);
         mListView = (ListView) findViewById(R.id.listView);
+
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, music);
+        mListView.setAdapter(adapter);
 
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
