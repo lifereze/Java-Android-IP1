@@ -11,17 +11,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
-    private Button mexplorebutton;
-    private EditText mLocationEditText;
+    @BindView(R.id.explorebutton) Button mexplorebutton;
+    @BindView(R.id.locationEditText) EditText mLocationEditText;
+    @BindView(R.id.appNameTextView) TextView mAppNameTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mLocationEditText = (EditText) findViewById(R.id.locationEditText);
-        mexplorebutton = (Button) findViewById(R.id.explorebutton);
+        ButterKnife.bind(this);
 
         mexplorebutton.setOnClickListener(new View.OnClickListener() {
             @Override
