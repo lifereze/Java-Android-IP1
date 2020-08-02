@@ -8,6 +8,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MusicActivity extends AppCompatActivity {
+    private ListView mListView;
+    private TextView mLocationTextView;
 
     private String[] music = new String[] {"Drip Too Hard", "Everyday We Lit",
             "Go Flex", "Goosebumps", "The Grinch", "Gucci On My Way",
@@ -15,13 +17,15 @@ public class MusicActivity extends AppCompatActivity {
             "Bouff Daddy", "Close Friends", "Congratulations",
             "Blow my Mind", "Dirty Iyanna"};
 
-    private TextView mLocationTextView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music);
+
         mLocationTextView = (TextView) findViewById(R.id.locationTextView);
+        mListView = (ListView) findViewById(R.id.listView);
 
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
