@@ -21,7 +21,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
         android:shadowColor="#19DD21"
-        android:text="Music Masters"
+        android:text="Music Guru"
         android:textSize="50sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/colorDivider" />

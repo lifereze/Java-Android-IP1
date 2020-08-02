@@ -44,7 +44,7 @@ public class MusicActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String location = intent.getStringExtra("location");
-        mLocationTextView.setText("Music In your Location" + location);
+        mLocationTextView.setText("Music In your Location" + "" +location);
     }
 
 }
