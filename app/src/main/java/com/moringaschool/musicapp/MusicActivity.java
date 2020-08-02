@@ -2,6 +2,7 @@ package com.moringaschool.musicapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -43,6 +44,8 @@ public class MusicActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String music = ((TextView)view).getText().toString();
+
+//                Log.v("MusicActivity", "In the onItemClickListener!");
                 Toast.makeText(MusicActivity.this, music, Toast.LENGTH_LONG).show();
             }
         });
