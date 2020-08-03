@@ -19,26 +19,26 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 @LargeTest
 public class MainActivityInstrumentationTest {
 
-    @Rule
-    public ActivityTestRule<MainActivity> activityTestRule =
-            new ActivityTestRule<>(MainActivity.class);
-
-    @Test
-    public void validateEditText() {
-        onView(withId(R.id.locationEditText)).perform(typeText("Nairobi"))
-                .check(matches(withText("Nairobi")));
-    }
-    @Test
-    public void locationIsSentToRestaurantsActivity(){
-        String location = "Portland";
-        onView(withId(R.id.locationEditText)).perform(typeText(location)).perform(closeSoftKeyboard());
-        try {                             // the sleep method requires to be checked and handled so we use try block
-            Thread.sleep(250);
-        } catch (InterruptedException e){
-            System.out.println("got interrupted!");
-        }
-        onView(withId(R.id.explorebutton)).perform(click());
-        onView(withId(R.id.locationTextView)).check(matches
-                (withText("Music In your Location: " + location)));
-    }
+//    @Rule
+//    public ActivityTestRule<MainActivity> activityTestRule =
+//            new ActivityTestRule<>(MainActivity.class);
+//
+//    @Test
+//    public void validateEditText() {
+//        onView(withId(R.id.locationEditText)).perform(typeText("Nairobi"))
+//                .check(matches(withText("Nairobi")));
+//    }
+//    @Test
+//    public void locationIsSentToRestaurantsActivity(){
+//        String location = "Portland";
+//        onView(withId(R.id.locationEditText)).perform(typeText(location)).perform(closeSoftKeyboard());
+//        try {                             // the sleep method requires to be checked and handled so we use try block
+//            Thread.sleep(250);
+//        } catch (InterruptedException e){
+//            System.out.println("got interrupted!");
+//        }
+//        onView(withId(R.id.explorebutton)).perform(click());
+//        onView(withId(R.id.locationTextView)).check(matches
+//                (withText("Music In your Location: " + location)));
+//    }
 }
